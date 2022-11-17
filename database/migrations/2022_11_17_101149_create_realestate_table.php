@@ -13,7 +13,7 @@ class CreateRealestateTable extends Migration
      */
     public function up()
     {
-        Schema::create('realestate', function (Blueprint $table) {
+        Schema::create('realstates', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('realtor_id');
             $table->foreign('realtor_id')->references('id')->on('realtors');

@@ -11,6 +11,6 @@ class Realstate extends Model
 
     public function realtor(){
 
-        return $gtis->()
+        return $this->belongsTo(Realtor::class);
     }
 }

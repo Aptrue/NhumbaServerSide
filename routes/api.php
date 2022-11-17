@@ -1,7 +1,9 @@
 <?php
 
+use App\Models\Realstate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Resources\RealStateCollection;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,4 +18,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+
+Route::get('/test', function(){
+   $realstates=Realstate::all();
+   return new RealStateCollection($realstates);
 });
