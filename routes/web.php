@@ -4,6 +4,8 @@ use App\Models\Realstate;
 use App\Models\Realtor;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\web\RealStateController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +27,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::middleware(['auth:sanctum'])->group(function () {
+
+    Route::get('realstate', [RealStateController::class, 'index']);
+    Route::get('realstate/create/index', [RealStateController::class, 'create'])->name('realstate.create.index');
+    Route::post('realstate/create/store', [RealStateController::class, 'store'])->name('realstate.store');
+});
