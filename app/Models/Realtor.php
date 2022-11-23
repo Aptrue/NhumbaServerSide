@@ -13,4 +13,6 @@ class Realtor extends Model
     public function realstate(){
         return $this->hasMany(Realstate::class);
     }
+
+   
 }

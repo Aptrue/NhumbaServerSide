@@ -5,8 +5,6 @@ use App\Models\Realtor;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\web\RealStateController;
-
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,6 +19,8 @@ use App\Http\Controllers\web\RealStateController;
 Route::get('/', function () {
 
     // 192.168.133.187
+
+
     return view('welcome');
 });
 

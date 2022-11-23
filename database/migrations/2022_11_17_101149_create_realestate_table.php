@@ -31,7 +31,7 @@ class CreateRealestateTable extends Migration
                 $table->string('province');
                 $table->string('description')->nullable();
             $table->unsignedBigInteger('realtor_id');
-            $table->foreign('realtor_id')->references('id')->on('realtors');
+            $table->foreign('realtor_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

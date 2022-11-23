@@ -8,7 +8,7 @@
 @stop
 
 @section('content')
-<form class="shadow p-3 mb-5 bg-white rounded" method="POST" action="{{ route('realstate.store') }}">
+<form class="shadow p-3 mb-5 bg-white rounded" method="POST" action="{{ route('realstate.store') }}" enctype="multipart/form-data">
   @csrf
   <div class="row">
         <div class="col">
@@ -87,6 +87,28 @@
           <input class="form-control" type="text" placeholder="0" name="adress">
         </div>
         </div>
+         <div class="col">
+         <div class="col">
+          <label for="exampleFormControlInput1">Condicoes do imovel</label>
+          <input class="form-control" type="text" placeholder="0" name="condition">
+        </div>
+        </div>
+
+  </div>
+
+  <div class="row">
+     <div class="col">
+         <div class="col">
+          <label for="exampleFormControlInput1">Imagem de Capa</label>
+          <input type="file" class="form-control-file" name="img" id="image">
+        </div>
+     </div>
+      <div class="col">
+         <div class="col">
+          <label for="exampleFormControlInput1">Outras Images (multipla)</label>
+          <input class="form-control" type="file" id="formFileMultiple" multiple  name="imgs[]" id="images">
+        </div>
+     </div>
   </div>
 
   <div class="form-group">

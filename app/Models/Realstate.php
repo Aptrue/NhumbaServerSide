@@ -9,8 +9,12 @@ class Realstate extends Model
 {
     use HasFactory;
 
+    protected $casts = [
+       'imgs'=>'array'
+    ];
+
     public function realtor(){
 
-        return $this->belongsTo(Realtor::class);
+        return $this->belongsTo(User::class);
     }
 }

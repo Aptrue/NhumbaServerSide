@@ -17,16 +17,20 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         User::factory(10)->create();
-        Realtor::factory(10)->create();
-
-
-
-    $armando = User::find(1);
+    
+        $armando = User::find(1);
 
         $armando->name = "Armando Paulo";
-        $armando->email = "armandopaulo@netware.co.mz";
+        $armando->email = "armandopaulo@gmail.com";
         $armando->password = Hash::make(12345678);
         $armando->save();
+
+
+        $eugennio = User::find(2);
+        $eugennio->name = "Eugenio Uaceda";
+        $eugennio->email = "eugenio@gmail.com";
+        $eugennio->password = Hash::make(12345678);
+        $eugennio->save();
 
     }
 }
