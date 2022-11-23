@@ -36,3 +36,8 @@ Route::get('/realtor/all', function(){
 
 Route::post('/user/login', [UserController::class, 'loginUser']);
 Route::post('/user/create', [UserController::class, 'createUser']);
+
+
+// http://192.168.133.187:8000/
+
+// php artisan serve --host=192.168.133.187 --port=8000
