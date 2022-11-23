@@ -15,6 +15,21 @@ class CreateRealestateTable extends Migration
     {
         Schema::create('realstates', function (Blueprint $table) {
             $table->id();
+            $table->string('uri');
+            $table->string('imgs');
+               $table->string('adress');
+               $table->string('wood');
+               $table->string('city');
+               $table->string('type');
+                $table->string('condition')->nullable();
+                $table->integer('rooms');
+                $table->integer('badrooms')->default(1)->nullable();
+                $table->string('utility');
+                $table->decimal('price', 8,2);
+                $table->string('currence');
+                $table->integer('rate');
+                $table->string('province');
+                $table->string('description')->nullable();
             $table->unsignedBigInteger('realtor_id');
             $table->foreign('realtor_id')->references('id')->on('realtors');
             $table->timestamps();

@@ -80,7 +80,7 @@ class UserController extends Controller
             if(!Auth::attempt($request->only(['email', 'password']))){
                 return response()->json([
                     'status' => false,
-                    'message' => 'Email & Password does not match with our record.',
+                    'message' => 'Usuario nao encontrado na bade de dados',
                 ], 401);
             }
 
@@ -88,7 +88,8 @@ class UserController extends Controller
 
             return response()->json([
                 'status' => true,
-                'message' => 'User Logged In Successfully',
+                'user' =>$user,
+                'message' => 'usuario autenticado com sucesso',
                 'token' => $user->createToken("API TOKEN")->plainTextToken
             ], 200);
 
@@ -98,5 +99,8 @@ class UserController extends Controller
                 'message' => $th->getMessage()
             ], 500);
         }
+
+
+
     }
 }

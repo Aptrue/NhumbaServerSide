@@ -20,8 +20,24 @@ class RealStateCollection extends ResourceCollection
         $data->transform(function($item, $index){
 
             return [
-                'realstate' =>$item->id,
-                'realtor'   =>$item->realtor->name
+                'id' =>$item->id,
+                'created_at'=>$item->created_at,
+                'uri' => "https://www.holidify.com/images/cmsuploads/compressed/1024px-Parramatta-NSW-GovernmentHouse_20190618193446.jpg",
+                'imgs' => [],
+                'adress'=> '',
+                'wood'=> 'default',
+                'city'=> '',
+                'type' => '',
+                'condition'=> '',
+                'rooms'=> 0,
+                'badrooms'=> 0,
+                'utility'=> '',
+                'price'=> 0,
+                'currence'=> '',
+                'rate'=> 4,
+                'province'=>  "",
+                'description'=> "",
+                'realtor'   =>$item->realtor
             ];
         });
 
