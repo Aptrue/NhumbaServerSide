@@ -13,7 +13,7 @@ class Realstate extends Model
        'imgs'=>'array'
     ];
 
-    public function realtor(){
+    public function user(){
 
         return $this->belongsTo(User::class);
     }

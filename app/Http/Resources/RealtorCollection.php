@@ -19,12 +19,12 @@ class RealtorCollection extends ResourceCollection
         $data->transform(function($item, $index){
 
             return [
-                
-                'uri' => "https://i.pravatar.cc/150?img=31",
+                'uri' => $item->uri,
                 'name'=>$item->name,
                 'email'=>$item->email,
                 'cellphone'=>$item->cellphone,
                 'id' =>$item->id,
+                'realstates'=>new RealStateCollection($item->realstate)
             ];
         });
 

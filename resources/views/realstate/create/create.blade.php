@@ -9,7 +9,7 @@
 
 @section('content')
 <form class="shadow p-3 mb-5 bg-white rounded" method="POST" action="{{ route('realstate.store') }}" enctype="multipart/form-data">
-  @csrf
+ @csrf
   <div class="row">
         <div class="col">
             <div class="form-group">

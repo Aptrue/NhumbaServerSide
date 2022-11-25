@@ -73,7 +73,7 @@ class RealStateController extends Controller
        $realstate->rooms =$request->rooms;
        $realstate->badrooms = $request->badrooms;
        $realstate->province = $request->province;
-       $realstate->realtor_id = $user->id;
+       $realstate->user_id = $user->id;
        $realstate->condition = $request->condition;
        $realstate->imgs = implode(',',$images_all);
 

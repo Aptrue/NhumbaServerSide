@@ -24,7 +24,7 @@
                         <span class="info-box-icon"><i class="far fa-flag"></i></span>
                         <div class="info-box-content">
                           <span class="info-box-text">Imoveis</span>
-                          <span class="info-box-number">410</span>
+                          <span class="info-box-number">{{ $realstate }}</span>
                         </div>
                       </div>
                 </div>

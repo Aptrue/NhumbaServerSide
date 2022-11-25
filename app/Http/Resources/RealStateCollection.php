@@ -42,7 +42,7 @@ class RealStateCollection extends ResourceCollection
                 'rate'=> $item->rate,
                 'province'=>  $item->province,
                 'description'=> $item->description,
-                'realtor'   =>$item->realtor
+                'realtor'   =>$item->user
             ];
         });
 

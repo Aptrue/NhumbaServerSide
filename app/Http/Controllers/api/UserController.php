@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\RealStateCollection;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -90,7 +91,8 @@ class UserController extends Controller
                 'status' => true,
                 'user' =>$user,
                 'message' => 'usuario autenticado com sucesso',
-                'token' => $user->createToken("API TOKEN")->plainTextToken
+                'token' => $user->createToken("API TOKEN")->plainTextToken,
+                'realstates'=>new RealStateCollection($user->realstate),
             ], 200);
 
         } catch (\Throwable $th) {

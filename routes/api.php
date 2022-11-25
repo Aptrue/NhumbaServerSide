@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Resources\RealStateCollection;
 use App\Http\Resources\RealtorCollection;
+use App\Http\Controllers\api\RealStateController;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,12 +32,18 @@ Route::get('/realstate/all', function(){
 });
 
 Route::get('/realtor/all', function(){
-    $realstates=Realtor::all();
+    $realstates=User::all();
     return new RealtorCollection($realstates);
  });
 
 Route::post('/user/login', [UserController::class, 'loginUser']);
 Route::post('/user/create', [UserController::class, 'createUser']);
+
+
+
+Route::post('/realstate/store', [RealStateController::class, 'store']);
+
+
 
 
 // http://192.168.133.187:8000/

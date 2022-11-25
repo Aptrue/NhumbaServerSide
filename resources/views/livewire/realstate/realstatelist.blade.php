@@ -32,7 +32,7 @@
                   <td>{{$realstate->wood}}</td>
                   <td>{{$realstate->adress}}</td>
                   <td>{{$realstate->badrooms}}</td>
-                  <td>{{$realstate->realtor->name}}</td>
+                  <td>{{$realstate->user->name}}</td>
                   <td>{{$realstate->created_at}}</td>
             </tr>
           @endforeach

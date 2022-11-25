@@ -30,8 +30,8 @@ class CreateRealestateTable extends Migration
                 $table->integer('rate')->nullable();
                 $table->string('province');
                 $table->string('description')->nullable();
-            $table->unsignedBigInteger('realtor_id');
-            $table->foreign('realtor_id')->references('id')->on('users');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
