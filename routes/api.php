@@ -46,6 +46,4 @@ Route::post('/realstate/store', [RealStateController::class, 'store']);
 
 
 
-// http://192.168.133.187:8000/
 
-// php artisan serve --host=192.168.133.187 --port=8000
